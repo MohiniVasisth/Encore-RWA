@@ -238,4 +238,168 @@ using SafeERC20 for IERC20;
         emit TicketPurchased(buyer, serial, price, organizerCut, investorCut);
     }
 
+
+
+    // --------------------------------------------------------------------- //
+    //                       Public: resale royalty sync                     //
+    // --------------------------------------------------------------------- //
+
+    /**
+     * @notice Fold any stablecoin sitting in the contract above the tracked
+     *         owed balance into the investor pool. This is how HTS resale
+     *         royalties (paid directly to this address by the network) are
+     *         accounted for. Permissionless: it can only ever increase what
+     *         investors are owed.
+     */
+    function syncRoyalties() public returns (uint256 synced) {
+        uint256 owed = poolCredited - poolDistributed;
+        uint256 bal = stablecoin.balanceOf(address(this));
+        if (bal <= owed) return 0;
+
+        synced = bal - owed;
+        poolCredited += synced;
+        royaltiesCollected += synced;
+
+        emit RoyaltiesSynced(synced, bal);
+    }
+
+    // --------------------------------------------------------------------- //
+    //                        Admin: settlement (fallback)                   //
+    // --------------------------------------------------------------------- //
+
+    /**
+     * @notice Close sales, sync royalties, and freeze the distributable pool.
+     * @param revenueRightSupply Total supply of the ATS revenue-right token,
+     *        used as the denominator for pro-rata allocation.
+     *
+     *        Preferred path is an ATS dividend / Mass Payout; call this only
+     *        when settling through the contract from an off-chain balance snapshot.
+     */
+    function closeAndSettle(uint256 revenueRightSupply) external onlyRole(ADMIN_ROLE) {
+        if (settled) revert AlreadySettled();
+        if (revenueRightSupply == 0) revert InvalidShare();
+
+        syncRoyalties();
+
+        salesOpen = false;
+        settled = true;
+        supplySnapshot = revenueRightSupply;
+        poolAtSettlement = poolCredited - poolDistributed;
+
+        emit SalesStatusChanged(false);
+        emit Settled(poolAtSettlement, supplySnapshot);
+    }
+
+    /**
+     * @notice Allocate pro-rata claims to revenue-right holders from an
+     *         off-chain balance snapshot. Idempotent per holder is NOT assumed:
+     *         call once per holder with their final snapshot balance.
+     *
+     * @param holders  Revenue-right token holder accounts (EVM addresses).
+     * @param balances Their token balances at the snapshot block.
+     */
+    function allocatePayouts(address[] calldata holders, uint256[] calldata balances)
+        external
+        onlyRole(ADMIN_ROLE)
+    {
+        if (!settled) revert NotSettled();
+        if (holders.length != balances.length) revert LengthMismatch();
+
+        uint256 _pool = poolAtSettlement;
+        uint256 _supply = supplySnapshot;
+        uint256 _allocated = allocated;
+
+        for (uint256 i = 0; i < holders.length; i++) {
+            address h = holders[i];
+            if (h == address(0)) revert ZeroAddress();
+
+            uint256 amount = (_pool * balances[i]) / _supply;
+            claimable[h] += amount;
+            _allocated += amount;
+
+            emit PayoutAllocated(h, amount, _allocated);
+        }
+
+        if (_allocated > _pool) revert AllocationExceedsPool();
+        allocated = _allocated;
+    }
+
+    /// @notice Pull your allocated payout after settlement.
+    function claim() external nonReentrant {
+        uint256 amount = claimable[msg.sender];
+        if (amount == 0) revert NothingClaimable();
+
+        claimable[msg.sender] = 0;
+        poolDistributed += amount;
+
+        stablecoin.safeTransfer(msg.sender, amount);
+        emit PayoutClaimed(msg.sender, amount);
+    }
+
+    /**
+     * @notice Sweep rounding dust left after all holders have claimed.
+     *         Only callable once settled and only for the amount above what is
+     *         still allocated-but-unclaimed.
+     */
+    function sweepDust(address to) external onlyRole(ADMIN_ROLE) {
+        if (!settled) revert NotSettled();
+        if (to == address(0)) revert ZeroAddress();
+
+        uint256 stillOwed = allocated - poolDistributed;
+        uint256 bal = stablecoin.balanceOf(address(this));
+        if (bal <= stillOwed) revert NothingClaimable();
+
+        uint256 dust = bal - stillOwed;
+        poolDistributed += dust;
+        stablecoin.safeTransfer(to, dust);
+        emit DustSwept(to, dust);
+    }
+
+    // --------------------------------------------------------------------- //
+    //                                Views                                  //
+    // --------------------------------------------------------------------- //
+
+    /// @notice Stablecoin currently owed to investors (locked in the contract).
+    function poolBalance() external view returns (uint256) {
+        return poolCredited - poolDistributed;
+    }
+
+    /**
+     * @notice Live estimated payout per revenue-right token, pre-settlement.
+     * @param revenueRightSupply Total supply of the revenue-right token.
+     */
+    function estimatedPayoutPerToken(uint256 revenueRightSupply)
+        external
+        view
+        returns (uint256)
+    {
+        if (revenueRightSupply == 0) return 0;
+        uint256 owed = poolCredited - poolDistributed;
+        return owed / revenueRightSupply;
+    }
+
+    /// @notice Snapshot of the event's on-chain financial health for the dashboard.
+    function financials()
+        external
+        view
+        returns (
+            uint256 sold,
+            uint256 cap,
+            uint256 grossPrimary,
+            uint256 toOrganizer,
+            uint256 poolNow,
+            uint256 royalties,
+            bool isSettled
+        )
+    {
+        return (
+            ticketsSold,
+            maxTickets,
+            primaryRevenue,
+            organizerProceeds,
+            poolCredited - poolDistributed,
+            royaltiesCollected,
+            settled
+        );
+    }
 }
