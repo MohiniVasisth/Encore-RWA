@@ -168,7 +168,25 @@ contract FundingVault is AccessControl, ReentrancyGuard {
      *         approved this contract for `amount`.
      */
     function invest(uint256 amount) external nonReentrant {
-       
+       if (status != Status.Open) revert NotOpen();
+        if (block.timestamp >= deadline) revert DeadlinePassed();
+        if (!kyc[msg.sender]) revert NotKyc();
+        if (amount == 0) revert ZeroAmount();
+        if (amount % pricePerToken != 0) revert NotWholeToken();
+
+        uint256 tokens = amount / pricePerToken;
+        if (tokensSold + tokens > tokensForSale) revert ExceedsOffer();
+
+        // Effects
+        contributed[msg.sender] += amount;
+        tokenAllocation[msg.sender] += tokens;
+        totalRaised += amount;
+        tokensSold += tokens;
+
+        // Interactions
+        stablecoin.safeTransferFrom(msg.sender, address(this), amount);
+
+        emit Invested(msg.sender, amount, tokens, totalRaised);
     }
 
     // --------------------------------------------------------------------- //
@@ -182,17 +200,43 @@ contract FundingVault is AccessControl, ReentrancyGuard {
      *         - Failed: deadline passed with raise < target.
      */
     function finalize() external {
-        
+        if (status != Status.Open) revert WrongStatus();
+
+        if (totalRaised >= fundingTarget && fundingTarget != 0) {
+            status = Status.Funded;
+        } else if (block.timestamp >= deadline) {
+            status = totalRaised >= fundingTarget ? Status.Funded : Status.Failed;
+        } else {
+            revert DeadlineNotReached();
+        }
+
+        emit Finalized(status, totalRaised);
     }
 
     /// @notice Organizer pulls the full raise once the offering is Funded.
     function withdrawOrganizerFunds() external nonReentrant onlyRole(ORGANIZER_ROLE) {
-        
+        if (status != Status.Funded) revert WrongStatus();
+        if (organizerWithdrawn) revert AlreadyWithdrawn();
+
+        organizerWithdrawn = true;
+        uint256 amount = totalRaised;
+        stablecoin.safeTransfer(organizer, amount);
+
+        emit OrganizerWithdrawal(organizer, amount);
     }
 
     /// @notice Investor reclaims their full contribution if the offering Failed.
     function refund() external nonReentrant {
-       
+       if (status != Status.Failed) revert WrongStatus();
+
+        uint256 amount = contributed[msg.sender];
+        if (amount == 0) revert NothingToRefund();
+
+        contributed[msg.sender] = 0;
+        tokenAllocation[msg.sender] = 0;
+        stablecoin.safeTransfer(msg.sender, amount);
+
+        emit Refunded(msg.sender, amount);
     }
 
     /**
@@ -200,7 +244,12 @@ contract FundingVault is AccessControl, ReentrancyGuard {
      *         revenue-right tokens through ATS. Does not move value here.
      */
     function markTokensDelivered(address investor) external onlyRole(ADMIN_ROLE) {
-        
+        if (status != Status.Funded) revert WrongStatus();
+        if (tokenAllocation[investor] == 0) revert NothingAllocated();
+        if (tokensDelivered[investor]) revert AlreadyDelivered();
+
+        tokensDelivered[investor] = true;
+        emit TokensDelivered(investor, tokenAllocation[investor]);
     }
 
     // --------------------------------------------------------------------- //
