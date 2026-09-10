@@ -166,4 +166,76 @@ using SafeERC20 for IERC20;
         emit EventConfigured(organizer, _ticketPrice, _investorShareBps, _maxTickets);
     }
 
+     /// @notice Point the organizer payout at a new account. Locked after first sale.
+    function updateOrganizer(address newOrganizer) external onlyRole(ADMIN_ROLE) {
+        if (newOrganizer == address(0)) revert ZeroAddress();
+        if (ticketsSold != 0) revert ConfigLocked();
+
+        address old = organizer;
+        _revokeRole(ORGANIZER_ROLE, old);
+        _grantRole(ORGANIZER_ROLE, newOrganizer);
+        organizer = newOrganizer;
+
+        emit OrganizerUpdated(old, newOrganizer);
+    }
+
+    /// @notice Open or close primary ticket sales.
+    function setSalesOpen(bool open) external onlyRole(ADMIN_ROLE) {
+        if (settled) revert AlreadySettled();
+        salesOpen = open;
+        emit SalesStatusChanged(open);
+    }
+
+    // --------------------------------------------------------------------- //
+    //                          Public: primary sale                         //
+    // --------------------------------------------------------------------- //
+
+    /**
+     * @notice Buy one primary ticket. The caller must have approved this
+     *         contract for at least `ticketPrice` of the stablecoin.
+     *
+     *         The organizer's share is transferred out immediately; the
+     *         investors' share stays locked in the contract.
+     *
+     * @return serial The 1-indexed ticket serial. The backend mints the matching
+     *                HTS ticket NFT with this serial to the buyer.
+     */
+    function buyTicket() external nonReentrant returns (uint256 serial) {
+        return _buyTicketFor(msg.sender);
+    }
+
+    /**
+     * @notice Buy a ticket, funded by the caller, assigned to `buyer`.
+     *         Lets the platform relayer purchase on behalf of a fan while the
+     *         fan still receives the NFT. Payment is still pulled from `msg.sender`.
+     */
+    function buyTicketFor(address buyer) external nonReentrant returns (uint256 serial) {
+        if (buyer == address(0)) revert ZeroAddress();
+        return _buyTicketFor(buyer);
+    }
+
+    function _buyTicketFor(address buyer) internal returns (uint256 serial) {
+        if (!salesOpen || settled) revert SalesClosed();
+        if (ticketsSold >= maxTickets) revert SoldOut();
+
+        uint256 price = ticketPrice;
+        uint256 investorCut = (price * investorShareBps) / BPS_DENOMINATOR;
+        uint256 organizerCut = price - investorCut;
+
+        // Effects
+        ticketsSold += 1;
+        serial = ticketsSold;
+        primaryRevenue += price;
+        poolCredited += investorCut;
+        organizerProceeds += organizerCut;
+
+        // Interactions: pull full price in, push organizer share out, keep investor share.
+        stablecoin.safeTransferFrom(msg.sender, address(this), price);
+        if (organizerCut > 0) {
+            stablecoin.safeTransfer(organizer, organizerCut);
+        }
+
+        emit TicketPurchased(buyer, serial, price, organizerCut, investorCut);
+    }
+
 }
