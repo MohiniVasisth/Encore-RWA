@@ -257,7 +257,8 @@ contract FundingVault is AccessControl, ReentrancyGuard {
     // --------------------------------------------------------------------- //
 
     function fundingProgressBps() external view returns (uint256) {
-       
+        if (fundingTarget == 0) return 0;
+        return (totalRaised * 10_000) / fundingTarget;
     }
 
     function summary()
