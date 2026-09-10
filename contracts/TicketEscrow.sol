@@ -62,4 +62,55 @@ using SafeERC20 for IERC20;
     uint256 public allocated; // sum of claimable[] allocated so far
     mapping(address => uint256) public claimable;
 
+     // --------------------------------------------------------------------- //
+    //                                Events                                 //
+    // --------------------------------------------------------------------- //
+
+    event EventConfigured(
+        address indexed organizer, uint256 ticketPrice, uint16 investorShareBps, uint256 maxTickets
+    );
+    event OrganizerUpdated(address indexed oldOrganizer, address indexed newOrganizer);
+    event SalesStatusChanged(bool open);
+    event TicketPurchased(
+        address indexed buyer,
+        uint256 indexed serial,
+        uint256 pricePaid,
+        uint256 organizerCut,
+        uint256 investorCut
+    );
+    event RoyaltiesSynced(uint256 amount, uint256 poolBalance);
+    event Settled(uint256 poolAtSettlement, uint256 supplySnapshot);
+    event PayoutAllocated(address indexed holder, uint256 amount, uint256 totalAllocated);
+    event PayoutClaimed(address indexed holder, uint256 amount);
+    event DustSwept(address indexed to, uint256 amount);
+
+    // --------------------------------------------------------------------- //
+    //                               Errors                                  //
+    // --------------------------------------------------------------------- //
+
+    error SalesClosed();
+    error SoldOut();
+    error AlreadySettled();
+    error NotSettled();
+    error ConfigLocked(); // cannot change terms after the first sale
+    error ZeroAddress();
+    error InvalidShare();
+    error NothingClaimable();
+    error AllocationExceedsPool();
+    error LengthMismatch();
+
+    // --------------------------------------------------------------------- //
+    //                             Constructor                               //
+    // --------------------------------------------------------------------- //
+
+    /**
+     * @param _stablecoin      ERC-20 facade address of the settlement stablecoin.
+     * @param _admin           Platform admin (gets DEFAULT_ADMIN_ROLE + ADMIN_ROLE).
+     * @param _organizer       Event organizer account (gets ORGANIZER_ROLE).
+     * @param _ticketPrice     Primary ticket price in stablecoin smallest units.
+     * @param _investorShareBps Investor share of each primary sale, in bps (<= 10000).
+     * @param _maxTickets      Hard cap on primary tickets sold through escrow.
+     */
+
+
 }
