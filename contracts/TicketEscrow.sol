@@ -111,6 +111,59 @@ using SafeERC20 for IERC20;
      * @param _investorShareBps Investor share of each primary sale, in bps (<= 10000).
      * @param _maxTickets      Hard cap on primary tickets sold through escrow.
      */
+      constructor(
+        address _stablecoin,
+        address _admin,
+        address _organizer,
+        uint256 _ticketPrice,
+        uint16 _investorShareBps,
+        uint256 _maxTickets
+    ) {
+        if (_stablecoin == address(0) || _admin == address(0) || _organizer == address(0)) {
+            revert ZeroAddress();
+        }
+        if (_investorShareBps == 0 || _investorShareBps >= BPS_DENOMINATOR) revert InvalidShare();
 
+        stablecoin = IERC20(_stablecoin);
+        organizer = _organizer;
+        ticketPrice = _ticketPrice;
+        investorShareBps = _investorShareBps;
+        maxTickets = _maxTickets;
+
+        _grantRole(DEFAULT_ADMIN_ROLE, _admin);
+        _grantRole(ADMIN_ROLE, _admin);
+        _grantRole(ORGANIZER_ROLE, _organizer);
+
+        emit EventConfigured(_organizer, _ticketPrice, _investorShareBps, _maxTickets);
+    }
+
+    // --------------------------------------------------------------------- //
+    //                          Admin: configuration                         //
+    // --------------------------------------------------------------------- //
+
+    /**
+     * @notice Associate this contract with the stablecoin HTS token (Hedera only).
+     *         Idempotent; safe to call on networks without HIP-719 (treated as no-op).
+     */
+    function associateStablecoin() external onlyRole(ADMIN_ROLE) {
+        try IHRC719(address(stablecoin)).associate() returns (uint256) {}
+        catch {}
+    }
+
+    /// @notice Update event terms. Locked once the first ticket is sold.
+    function configureEvent(
+        uint256 _ticketPrice,
+        uint16 _investorShareBps,
+        uint256 _maxTickets
+    ) external onlyRole(ADMIN_ROLE) {
+        if (ticketsSold != 0) revert ConfigLocked();
+        if (_investorShareBps == 0 || _investorShareBps >= BPS_DENOMINATOR) revert InvalidShare();
+
+        ticketPrice = _ticketPrice;
+        investorShareBps = _investorShareBps;
+        maxTickets = _maxTickets;
+
+        emit EventConfigured(organizer, _ticketPrice, _investorShareBps, _maxTickets);
+    }
 
 }
