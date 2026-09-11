@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Encore</title>
+    <meta
+      name="description"
+      content="Programmable event revenue securities on Hedera — invest in an event's future ticket revenue, captured and settled on-chain."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%97%86%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-mesh" aria-hidden="true"></div>
+
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="brand">
+          <span class="logo">◆</span>
+          <span class="wordmark">Encore</span>
+          <span class="net-pill" id="netPill">testnet</span>
+        </div>
+        <h1>Programmable event revenue securities on&nbsp;Hedera</h1>
+        <p class="lede">
+          Investors fund the event through a compliant revenue token. Every ticket sale is
+          captured and split on-chain, and even resales pay the backers.
+        </p>
+        <div class="rolebar">
+          <label for="role">Acting as</label>
+          <div class="select-wrap">
+            <select id="role">
+              <option value="admin">Admin</option>
+              <option value="organizer">Organizer</option>
+              <option value="investor1">Investor 1</option>
+              <option value="investor2">Investor 2</option>
+              <option value="fan">Fan</option>
+            </select>
+          </div>
+          <span id="roleAddr" class="mono"></span>
+        </div>
+      </div>
+    </header>
+
+    <div id="banner" class="banner" hidden></div>
+
+    <nav class="tabs" id="tabs">
+      <button data-tab="offering" class="active">Offering</button>
+      <button data-tab="funding">Funding</button>
+      <button data-tab="tickets">Ticket sales</button>
+      <button data-tab="resale">Resale</button>
+      <button data-tab="compliance">Compliance</button>
+      <button data-tab="settlement">Settlement</button>
+      <button data-tab="health">Event health</button>
+    </nav>
+
+    <main>
+      <!-- OFFERING -->
+      <section id="tab-offering" class="tab">
+        <div class="sec-head"><h2>The offering</h2><span class="sub">Delhi Music Festival</span></div>
+        <div id="offeringTerms" class="grid"></div>
+        <div class="sec-head">
+          <h3>Scenarios</h3><span class="sub">a real investment can lose money</span>
+        </div>
+        <div class="table-wrap">
+          <table id="scenarioTable">
+            <thead>
+              <tr><th>Scenario</th><th>Tickets</th><th>Ticket revenue</th><th>Investor pool</th><th>Payout / token</th><th>Return</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p id="onchainLinks" class="links"></p>
+      </section>
+
+      <!-- FUNDING -->
+      <section id="tab-funding" class="tab" hidden>
+        <div class="sec-head"><h2>Funding</h2><span class="sub">all-or-nothing</span></div>
+        <div id="fundingSummary" class="grid"></div>
+        <div class="progress"><div id="fundingBar"></div></div>
+        <div class="actions">
+          <fieldset><legend>Admin</legend>
+            <label>Investor
+              <div class="select-wrap"><select id="kycInvestor"><option>investor1</option><option>investor2</option></select></div>
+            </label>
+            <button data-act="kyc-approve">Approve KYC</button>
+            <button data-act="kyc-revoke" class="ghost">Revoke</button>
+            <button data-act="deliver" class="ghost">Deliver tokens</button>
+          </fieldset>
+          <fieldset><legend>Investor</legend>
+            <label>Tokens <input id="investTokens" type="number" value="1500" min="1" /></label>
+            <button data-act="invest">Invest</button>
+            <button data-act="refund" class="ghost">Refund</button>
+          </fieldset>
+          <fieldset><legend>Anyone / Organizer</legend>
+            <button data-act="finalize">Finalize raise</button>
+            <button data-act="withdraw" class="ghost">Organizer withdraw</button>
+          </fieldset>
+        </div>
+      </section>
+
+      <!-- TICKETS -->
+      <section id="tab-tickets" class="tab" hidden>
+        <div class="sec-head">
+          <h2>Ticket sales</h2><span class="sub">every ticket split on-chain before the organizer is paid</span>
+        </div>
+        <div id="ticketFinancials" class="grid"></div>
+        <div class="actions">
+          <fieldset><legend>Admin</legend>
+            <button data-act="sales-open">Open sales</button>
+            <button data-act="sales-close" class="ghost">Close sales</button>
+          </fieldset>
+          <fieldset><legend>Fan</legend>
+            <button data-act="buy">Buy 1 ticket</button>
+            <label>Batch <input id="buyCount" type="number" value="5" min="1" max="25" /></label>
+            <button data-act="buy-batch" class="ghost">Buy batch</button>
+          </fieldset>
+        </div>
+        <div class="table-wrap">
+          <table id="ticketList">
+            <thead><tr><th>Escrow #</th><th>NFT serial</th><th>Owner</th><th>Bought</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- RESALE -->
+      <section id="tab-resale" class="tab" hidden>
+        <div class="sec-head">
+          <h2>Resale</h2><span class="sub">10% of every resale goes to the investor pool</span>
+        </div>
+        <div class="actions">
+          <fieldset><legend>Resell a ticket NFT</legend>
+            <label>From <div class="select-wrap"><select id="resaleFrom" class="roleopts"></select></div></label>
+            <label>To <div class="select-wrap"><select id="resaleTo" class="roleopts"></select></div></label>
+            <label>NFT serial <input id="resaleSerial" type="number" value="1" min="1" /></label>
+            <label>Price <input id="resalePrice" type="number" value="80" min="1" /></label>
+            <button data-act="resell">Resell</button>
+          </fieldset>
+        </div>
+        <div id="resaleResult" class="result"></div>
+      </section>
+
+      <!-- COMPLIANCE -->
+      <section id="tab-compliance" class="tab" hidden>
+        <div class="sec-head"><h2>Compliance</h2><span class="sub">enforced by ATS</span></div>
+        <div id="complianceStatus" class="grid"></div>
+        <div class="actions">
+          <fieldset><legend>Admin</legend>
+            <label>Holder
+              <div class="select-wrap"><select id="freezeTarget"><option>investor1</option><option>investor2</option></select></div>
+            </label>
+            <button data-act="freeze">Freeze</button>
+            <button data-act="unfreeze" class="ghost">Unfreeze</button>
+          </fieldset>
+          <fieldset><legend>Run the full scenario</legend>
+            <button data-act="scenario">Run 4-case scenario</button>
+          </fieldset>
+        </div>
+        <div class="table-wrap">
+          <table id="complianceReport">
+            <thead><tr><th>Case</th><th>Expected</th><th>Result</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SETTLEMENT -->
+      <section id="tab-settlement" class="tab" hidden>
+        <div class="sec-head"><h2>Settlement</h2></div>
+        <div id="settlementInfo" class="grid"></div>
+        <div class="actions">
+          <fieldset><legend>Admin</legend>
+            <button data-act="sync" class="ghost">Sync royalties</button>
+            <button data-act="settle">Settle</button>
+          </fieldset>
+          <fieldset><legend>Holder</legend>
+            <button data-act="claim">Claim payout</button>
+          </fieldset>
+        </div>
+        <div id="settlementResult" class="result"></div>
+      </section>
+
+      <!-- HEALTH -->
+      <section id="tab-health" class="tab" hidden>
+        <div class="sec-head"><h2>Event health</h2><span class="sub">read live from the chain</span></div>
+        <div id="healthCards" class="cards"></div>
+        <div class="sec-head"><h3>Activity</h3></div>
+        <ul id="activity" class="activity"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p class="pitch">
+        Investors fund the event through a compliant revenue token. Every ticket sale is captured
+        and split on-chain, and even resales pay the backers.
+      </p>
+      <p id="disclaimer" class="fine"></p>
+    </footer>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="./app.js"></script>
+  </body>
+</html>
