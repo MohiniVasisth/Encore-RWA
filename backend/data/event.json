@@ -1,0 +1,30 @@
+{
+  "id": "delhi-music-festival-2026",
+  "name": "Delhi Music Festival",
+  "description": "One complete Encore lifecycle, hardcoded for the MVP demo.",
+  "currency": "mUSD",
+  "stablecoinDecimals": 6,
+
+  "offering": {
+    "fundingTarget": 30000,
+    "tokensForSale": 3000,
+    "pricePerToken": 10,
+    "revenueSharePct": 18,
+    "fundingDurationHours": 72
+  },
+
+  "tickets": {
+    "price": 50,
+    "maxTickets": 6000,
+    "expectedTicketsSold": 4000,
+    "resaleRoyaltyPct": 10
+  },
+
+  "scenarios": {
+    "weak":     { "label": "Weak sales",   "ticketsSold": 2400 },
+    "expected": { "label": "As expected",  "ticketsSold": 4000 },
+    "strong":   { "label": "Strong sales", "ticketsSold": 5000 }
+  },
+
+  "disclaimer": "Encore is a hackathon prototype on Hedera testnet. Nothing here is an offer of securities or financial advice."
+}

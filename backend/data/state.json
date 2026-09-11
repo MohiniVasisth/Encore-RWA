@@ -1,0 +1,147 @@
+{
+  "tickets": {},
+  "investors": {
+    "0xfa10e85a5b8d68fdc491d12af0245bef0d9bbf3e": {
+      "role": "investor1",
+      "kyc": true,
+      "contributed": 30000,
+      "tokens": 3000,
+      "delivered": true
+    }
+  },
+  "activity": [
+    {
+      "at": "2026-09-11T08:15:28.256Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0xdaba3047a0c3de2da94e5845da6493029aaf283d71a2ed8ad3e7939be0b9f051",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xdaba3047a0c3de2da94e5845da6493029aaf283d71a2ed8ad3e7939be0b9f051"
+    },
+    {
+      "at": "2026-09-11T08:00:30.988Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: execution reverted (unknown custom error)"
+    },
+    {
+      "at": "2026-09-11T08:00:30.250Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0x2674faeb1e663683156edba45388df89bb692e02f924753903258236ecf76a9a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x2674faeb1e663683156edba45388df89bb692e02f924753903258236ecf76a9a"
+    },
+    {
+      "at": "2026-09-11T08:00:22.383Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: could not coalesce error"
+    },
+    {
+      "at": "2026-09-11T08:00:04.465Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: execution reverted (unknown custom error)"
+    },
+    {
+      "at": "2026-09-11T07:58:01.583Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: execution reverted (unknown custom error)"
+    },
+    {
+      "at": "2026-09-11T07:57:52.489Z",
+      "kind": "deliver",
+      "message": "Delivered 3000 revenue-right tokens to investor1",
+      "txHash": "0x1a3e2ac0b876ed2c4814e95ead711f13e3d45c871e613812d1a5f7fc073a662f",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x1a3e2ac0b876ed2c4814e95ead711f13e3d45c871e613812d1a5f7fc073a662f",
+      "ats": {
+        "mode": "mock",
+        "amount": 3000,
+        "txHash": "0xcd01f93986d8cf5c32e3d851179c2ae6f7be60cf8245ed7822660d3309be9a3c",
+        "hashscan": "https://hashscan.io/testnet/transaction/0xcd01f93986d8cf5c32e3d851179c2ae6f7be60cf8245ed7822660d3309be9a3c"
+      }
+    },
+    {
+      "at": "2026-09-11T07:57:36.542Z",
+      "kind": "withdraw",
+      "message": "Organizer withdrew the raise",
+      "txHash": "0x09f8796437ee77c4404a3d9b45a78778dc50364c59673ffc65cc48ed957b714a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x09f8796437ee77c4404a3d9b45a78778dc50364c59673ffc65cc48ed957b714a"
+    },
+    {
+      "at": "2026-09-11T07:57:28.197Z",
+      "kind": "finalize",
+      "message": "Offering finalized: Funded",
+      "txHash": "0x6ea64ebfecadbbe8ae99d531fcf82dd9f4675d138e39a174ce919e9f20b0574e",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x6ea64ebfecadbbe8ae99d531fcf82dd9f4675d138e39a174ce919e9f20b0574e"
+    },
+    {
+      "at": "2026-09-11T07:48:36.588Z",
+      "kind": "invest",
+      "message": "investor1 invested 30000 mUSD for 3000 tokens",
+      "txHash": "0xd8a9a21c7d71205e28cedb0424807fea7b78f44a96b11b1425e2906379e74ffc",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xd8a9a21c7d71205e28cedb0424807fea7b78f44a96b11b1425e2906379e74ffc"
+    },
+    {
+      "at": "2026-09-11T07:48:18.918Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x35cbd2ad7a3016bed23b6d551d0659943b98233eca07b66333f5f20c395ded44",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x35cbd2ad7a3016bed23b6d551d0659943b98233eca07b66333f5f20c395ded44"
+    },
+    {
+      "at": "2026-09-11T07:44:30.378Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x12817a1b5d9dbf8d861e4f881e1ecb8d53e67cdf6a6d8584fc676da1905097fe",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x12817a1b5d9dbf8d861e4f881e1ecb8d53e67cdf6a6d8584fc676da1905097fe"
+    },
+    {
+      "at": "2026-09-11T07:44:29.948Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x3f190eec12627bd888409c52e967dca6be34830f50a7374578402959786a1a01",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x3f190eec12627bd888409c52e967dca6be34830f50a7374578402959786a1a01"
+    },
+    {
+      "at": "2026-09-11T07:44:29.211Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0xc9e1f9b136c82b2d78b04314ecfac445aa713fbd49d7a14b66c7940f6268eae5",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xc9e1f9b136c82b2d78b04314ecfac445aa713fbd49d7a14b66c7940f6268eae5"
+    },
+    {
+      "at": "2026-09-11T07:44:29.211Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0xce286f58d6357b50dc978602428905b7ffebb68da994d37fe1ad16719c63bee0",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xce286f58d6357b50dc978602428905b7ffebb68da994d37fe1ad16719c63bee0"
+    },
+    {
+      "at": "2026-09-11T07:44:29.210Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x2adf80970bd6b3f315d8cef8036af00d2804b1bc7a061e48ba68b2e64df2138a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x2adf80970bd6b3f315d8cef8036af00d2804b1bc7a061e48ba68b2e64df2138a"
+    },
+    {
+      "at": "2026-09-11T07:35:16.388Z",
+      "kind": "sales",
+      "message": "Primary sales opened",
+      "txHash": "0x17b3c03b9656029e87a2eead81187086a4245b7173d486cefa5d012d30d20630",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x17b3c03b9656029e87a2eead81187086a4245b7173d486cefa5d012d30d20630"
+    },
+    {
+      "at": "2026-09-11T07:35:09.597Z",
+      "kind": "sales",
+      "message": "Primary sales opened",
+      "txHash": "0x89e3ee30084387cf75781b8cfdff9feba2b14d07d15988dcc9c43e0775cf599f",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x89e3ee30084387cf75781b8cfdff9feba2b14d07d15988dcc9c43e0775cf599f"
+    },
+    {
+      "at": "2026-09-11T07:35:05.296Z",
+      "kind": "sales",
+      "message": "Primary sales closed",
+      "txHash": "0xab252891becf005b307178954538f6efa896e6547c8164c29016fbbf1c689683",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xab252891becf005b307178954538f6efa896e6547c8164c29016fbbf1c689683"
+    }
+  ],
+  "settlement": null
+}
