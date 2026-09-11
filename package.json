@@ -1,0 +1,37 @@
+{
+  "name": "encore",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Programmable event revenue securities on Hedera — tokenized ticket-revenue rights with on-chain proof of revenue.",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "node": "hardhat node",
+    "hedera:accounts": "node scripts/hedera/createAccounts.js",
+    "hedera:stablecoin": "hardhat run scripts/hedera/createStablecoin.js --network hederaTestnet",
+    "hedera:ticket-nft": "hardhat run scripts/hedera/createTicketNft.js --network hederaTestnet",
+    "deploy:vault": "hardhat run scripts/deploy/deployFundingVault.js --network hederaTestnet",
+    "deploy:escrow": "hardhat run scripts/deploy/deployTicketEscrow.js --network hederaTestnet",
+    "deploy:mock-rr": "hardhat run scripts/deploy/deployMockRevenueRight.js --network hederaTestnet",
+    "wireup": "hardhat run scripts/deploy/wireUp.js --network hederaTestnet",
+    "ats:check": "hardhat run scripts/ats/checkAts.js --network hederaTestnet",
+    "ats:grant-roles": "hardhat run scripts/ats/grantRoles.js --network hederaTestnet",
+    "demo": "node scripts/demo/endToEnd.js",
+    "backend": "node backend/server.js",
+    "dev": "node --watch backend/server.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.53.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "express": "^4.19.2"
+  }
+}
