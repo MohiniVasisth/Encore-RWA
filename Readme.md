@@ -67,3 +67,84 @@ An investment can lose money — that's the point of showing all three.
 5. **Compliance** — the token can't be held or transferred by unverified or frozen accounts
 6. **Settlement** — after the event, the pool is paid out to token holders
 7. **Event health** — tickets sold, pool balance, and estimated payout per token, all read live from the chain
+
+## Getting started
+
+The code is fully written but ships unconfigured — no `.env`, no deployed
+contracts. Follow these in order.
+
+### 0. Prerequisites
+
+- Node.js 18+
+- A Hedera **testnet** account (create one free at
+  [portal.hedera.com](https://portal.hedera.com))
+
+### 1. Install and sanity-check the contracts
+
+```bash
+npm install
+npm run compile
+npm test
+```
+
+This runs the Hardhat test suite against `FundingVault.sol`, `TicketEscrow.sol`,
+and the mock revenue-right token — no Hedera connection needed yet.
+
+### 2. Configure environment
+
+```bash
+cp .env.example .env
+```
+
+Fill in `OPERATOR_ID` / `OPERATOR_KEY` / `EVM_OPERATOR_KEY` from your Hedera
+testnet account, then generate the demo role accounts (organizer, investor1,
+investor2, admin, fan):
+
+```bash
+npm run hedera:accounts
+```
+
+Paste the generated IDs/keys back into `.env`. Full details on every variable
+are in `docs/HEDERA_RESOURCES_NEEDED.md`.
+
+### 3. Deploy to Hedera testnet
+
+Run in this order — later steps depend on addresses from earlier ones:
+
+```bash
+npm run hedera:stablecoin      # creates mUSD, fill STABLECOIN_* in .env
+npm run deploy:vault           # FundingVault, fill FUNDING_VAULT_ADDRESS
+npm run deploy:escrow          # TicketEscrow, fill TICKET_ESCROW_ADDRESS
+npm run hedera:ticket-nft      # Ticket NFT (royalty collector = TicketEscrow)
+npm run deploy:mock-rr         # mock revenue-right token (ATS_MODE=mock)
+npm run wireup                 # wires the deployed contracts together
+```
+
+### 4. Validate end-to-end
+
+```bash
+npm run demo
+```
+
+Walks the full lifecycle (fund → sell tickets → resell → settle → claim)
+script-only, before involving the UI — the fastest way to catch a
+misconfiguration.
+
+### 5. Run the app locally
+
+```bash
+npm run backend     # or: npm run dev   (auto-restart on change)
+```
+
+Then open `frontend/index.html`. Without a backend it falls back to a
+read-only **preview mode**; with the backend running against your testnet
+deployment, every tab (Funding, Tickets, Resale, Compliance, Settlement,
+Health) is live.
+
+### 6. Deploy to production (Vercel)
+
+`vercel.json` + `api/index.js` are already wired: `/api/*` routes to the
+backend as a serverless function, everything else serves `frontend/` as
+static files. Set the same variables from your `.env` in the Vercel project's
+**Settings → Environment Variables**, then deploy. With no env vars set the
+site still deploys and runs in preview mode.
