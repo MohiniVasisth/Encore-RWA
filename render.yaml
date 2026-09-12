@@ -1,0 +1,74 @@
+services:
+  - type: web
+    name: encore-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node backend/server.js
+    envVars:
+      - key: HEDERA_NETWORK
+        value: testnet
+      - key: HEDERA_TESTNET_RPC_URL
+        value: https://testnet.hashio.io/api
+      - key: MIRROR_NODE_URL
+        value: https://testnet.mirrornode.hedera.com
+      - key: ATS_MODE
+        value: mock
+      - key: ATS_SETTLEMENT_PATH
+        value: escrow
+      - key: STABLECOIN_DECIMALS
+        value: "6"
+      - key: TICKET_RESALE_ROYALTY_BPS
+        value: "1000"
+      - key: REVENUE_RIGHT_TOTAL_SUPPLY
+        value: "3000"
+      - key: OPERATOR_ID
+        sync: false
+      - key: OPERATOR_KEY
+        sync: false
+      - key: EVM_OPERATOR_KEY
+        sync: false
+      - key: ORGANIZER_ID
+        sync: false
+      - key: ORGANIZER_KEY
+        sync: false
+      - key: ORGANIZER_EVM
+        sync: false
+      - key: INVESTOR1_ID
+        sync: false
+      - key: INVESTOR1_KEY
+        sync: false
+      - key: INVESTOR1_EVM
+        sync: false
+      - key: INVESTOR2_ID
+        sync: false
+      - key: INVESTOR2_KEY
+        sync: false
+      - key: INVESTOR2_EVM
+        sync: false
+      - key: ADMIN_ID
+        sync: false
+      - key: ADMIN_KEY
+        sync: false
+      - key: ADMIN_EVM
+        sync: false
+      - key: FAN_ID
+        sync: false
+      - key: FAN_KEY
+        sync: false
+      - key: FAN_EVM
+        sync: false
+      - key: STABLECOIN_TOKEN_ID
+        sync: false
+      - key: STABLECOIN_EVM_ADDRESS
+        sync: false
+      - key: TICKET_NFT_TOKEN_ID
+        sync: false
+      - key: ROYALTY_COLLECTOR_ID
+        sync: false
+      - key: MOCK_REVENUE_RIGHT_ADDRESS
+        sync: false
+      - key: FUNDING_VAULT_ADDRESS
+        sync: false
+      - key: TICKET_ESCROW_ADDRESS
+        sync: false
