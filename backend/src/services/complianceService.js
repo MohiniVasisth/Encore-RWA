@@ -36,8 +36,8 @@ async function setFrozen(roleName, frozen) {
  */
 async function attemptTransfer(fromRole, toRole, amount) {
   const to = config.roles[toRole].evmAddress;
+  const contract = atsService.tokenContract(fromRole);
   try {
-    const contract = atsService.tokenContract(fromRole);
     let value = BigInt(amount);
     if (!atsService.isMock()) {
       const decimals = Number(await contract.decimals());
@@ -51,7 +51,7 @@ async function attemptTransfer(fromRole, toRole, amount) {
     );
     return { allowed: true, txHash: r.hash };
   } catch (err) {
-    const reason = decodeReason(err);
+    const reason = decodeReason(err, contract.interface);
     store.recordActivity(
       "compliance",
       `Transfer ${fromRole} → ${toRole} (${amount}) REJECTED: ${reason}`,
@@ -61,7 +61,23 @@ async function attemptTransfer(fromRole, toRole, amount) {
   }
 }
 
-function decodeReason(err) {
+/**
+ * This mostly hits ethers' `eth_estimateGas` path (Hashio rejects the gas
+ * estimate before a transaction is even sent), which returns the raw revert
+ * bytes in `err.data` but — unlike a `Contract` read call — does NOT run them
+ * through the ABI decoder itself. Decode them by hand via the same contract's
+ * `interface` so a frozen/non-KYC revert reads as `SenderFrozen(0x07ff...)`
+ * instead of ethers' generic "unknown custom error".
+ */
+function decodeReason(err, iface) {
+  if (iface && typeof err.data === "string") {
+    try {
+      const parsed = iface.parseError(err.data);
+      if (parsed) return `${parsed.name}(${parsed.args.map(String).join(", ")})`;
+    } catch (_) {
+      /* not a custom error this ABI knows — fall through */
+    }
+  }
   return (
     err.reason ||
     err.shortMessage ||

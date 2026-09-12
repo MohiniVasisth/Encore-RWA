@@ -39,6 +39,11 @@ const MOCK_ABI = [
   "function transfer(address to, uint256 amount) returns (bool)",
   "function isKycApproved(address) view returns (bool)",
   "function isFrozen(address) view returns (bool)",
+  // Custom errors — listed so ethers can decode a revert into a readable
+  // reason instead of "unknown custom error" (see MockRevenueRightToken.sol).
+  "error ReceiverNotKyc(address account)",
+  "error SenderFrozen(address account)",
+  "error ReceiverFrozen(address account)",
 ];
 
 const KYC_VALIDITY_SECONDS =

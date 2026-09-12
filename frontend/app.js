@@ -140,7 +140,7 @@ $("#role").addEventListener("change", () => {
 /* ---------- action buttons ---------- */
 document.addEventListener("click", (e) => {
   const btn = e.target.closest("button[data-act]");
-  if (!btn) return;
+  if (!btn || btn.disabled) return; // guard: ignore clicks while its own request is in flight
   const a = btn.dataset.act;
   const H = {
     "kyc-approve": () =>
@@ -199,7 +199,12 @@ document.addEventListener("click", (e) => {
       $("#settlementResult").innerHTML = `<pre>${JSON.stringify(r, null, 2)}</pre>`;
     },
   };
-  (H[a] || (() => toast("not wired: " + a, "err")))();
+  btn.disabled = true;
+  Promise.resolve((H[a] || (() => toast("not wired: " + a, "err")))())
+    .catch(() => {}) // already toasted by act(); just avoid an unhandled-rejection console warning
+    .finally(() => {
+      btn.disabled = false;
+    });
 });
 
 /* ---------- renderers ---------- */

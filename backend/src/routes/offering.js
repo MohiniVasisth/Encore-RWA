@@ -32,14 +32,18 @@ router.get(
       },
       scenarios: buildScenarios(config.event),
       onChain: {
-        revenueRightTokenId: config.revenueRight.tokenId,
+        // mock mode: the revenue-right "token" is a plain EVM contract
+        // (MockRevenueRightToken), not an HTS token — link/id it accordingly.
+        revenueRightTokenId: config.ats.mode === "mock" ? config.ats.mockAddress : config.revenueRight.tokenId,
         ticketNftTokenId: config.ticketNft.tokenId,
         stablecoinTokenId: config.stablecoin.tokenId,
         fundingVault: config.contracts.fundingVault,
         ticketEscrow: config.contracts.ticketEscrow,
         links: {
           revenueRightToken:
-            config.revenueRight.tokenId && hashscan.token(config.revenueRight.tokenId),
+            config.ats.mode === "mock"
+              ? config.ats.mockAddress && hashscan.contract(config.ats.mockAddress)
+              : config.revenueRight.tokenId && hashscan.token(config.revenueRight.tokenId),
           fundingVault:
             config.contracts.fundingVault && hashscan.contract(config.contracts.fundingVault),
           ticketEscrow:
