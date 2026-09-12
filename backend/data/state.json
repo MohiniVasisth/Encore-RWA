@@ -1,11 +1,172 @@
 {
   "tickets": {
-    "13": {
+    "1": {
       "owner": "fan",
       "ownerAccountId": "0.0.10475465",
       "nftSerial": "1",
-      "mintTxId": "0.0.10470722@1789203609.838095250",
-      "boughtAt": "2026-09-12T09:00:21.227Z"
+      "mintTxId": "0.0.10470722@1789233755.010772288",
+      "boughtAt": "2026-09-12T17:22:41.905Z"
+    },
+    "2": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "2",
+      "mintTxId": "0.0.10470722@1789233766.520210779",
+      "boughtAt": "2026-09-12T17:22:56.165Z"
+    },
+    "3": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "3",
+      "mintTxId": "0.0.10470722@1789233780.625789333",
+      "boughtAt": "2026-09-12T17:23:09.208Z"
+    },
+    "4": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "4",
+      "mintTxId": "0.0.10470722@1789233791.061928465",
+      "boughtAt": "2026-09-12T17:23:22.007Z"
+    },
+    "5": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "5",
+      "mintTxId": "0.0.10470722@1789233805.915200613",
+      "boughtAt": "2026-09-12T17:23:34.980Z"
+    },
+    "6": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "6",
+      "mintTxId": "0.0.10470722@1789233819.493979676",
+      "boughtAt": "2026-09-12T17:23:46.912Z"
+    },
+    "7": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "7",
+      "mintTxId": "0.0.10470722@1789233833.556714846",
+      "boughtAt": "2026-09-12T17:24:00.885Z"
+    },
+    "8": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "8",
+      "mintTxId": "0.0.10470722@1789233842.527542933",
+      "boughtAt": "2026-09-12T17:24:13.468Z"
+    },
+    "9": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "9",
+      "mintTxId": "0.0.10470722@1789233856.459928088",
+      "boughtAt": "2026-09-12T17:24:26.617Z"
+    },
+    "10": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "10",
+      "mintTxId": "0.0.10470722@1789233870.891521176",
+      "boughtAt": "2026-09-12T17:24:40.082Z"
+    },
+    "11": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "11",
+      "mintTxId": "0.0.10470722@1789233881.640120498",
+      "boughtAt": "2026-09-12T17:24:53.105Z"
+    },
+    "12": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "12",
+      "mintTxId": "0.0.10470722@1789233897.896323622",
+      "boughtAt": "2026-09-12T17:25:05.872Z"
+    },
+    "13": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "13",
+      "mintTxId": "0.0.10470722@1789232904.399620133",
+      "boughtAt": "2026-09-12T17:08:34.325Z"
+    },
+    "14": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "14",
+      "mintTxId": "0.0.10470722@1789232917.345824131",
+      "boughtAt": "2026-09-12T17:08:47.408Z"
+    },
+    "15": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "15",
+      "mintTxId": "0.0.10470722@1789232931.537402553",
+      "boughtAt": "2026-09-12T17:09:00.709Z"
+    },
+    "16": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "16",
+      "mintTxId": "0.0.10470722@1789232943.557166788",
+      "boughtAt": "2026-09-12T17:09:13.318Z"
+    },
+    "17": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "17",
+      "mintTxId": "0.0.10470722@1789232954.020613640",
+      "boughtAt": "2026-09-12T17:09:25.418Z"
+    },
+    "18": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "18",
+      "mintTxId": "0.0.10470722@1789232968.007989479",
+      "boughtAt": "2026-09-12T17:09:37.889Z"
+    },
+    "19": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "19",
+      "mintTxId": "0.0.10470722@1789232979.909441659",
+      "boughtAt": "2026-09-12T17:09:52.155Z"
+    },
+    "20": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "20",
+      "mintTxId": "0.0.10470722@1789232997.370512951",
+      "boughtAt": "2026-09-12T17:10:05.088Z"
+    },
+    "21": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "21",
+      "mintTxId": "0.0.10470722@1789233006.271358090",
+      "boughtAt": "2026-09-12T17:10:19.246Z"
+    },
+    "22": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "22",
+      "mintTxId": "0.0.10470722@1789233021.684006552",
+      "boughtAt": "2026-09-12T17:10:32.813Z"
+    },
+    "23": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "23",
+      "mintTxId": "0.0.10470722@1789233034.436813059",
+      "boughtAt": "2026-09-12T17:10:44.934Z"
+    },
+    "24": {
+      "owner": "fan",
+      "ownerAccountId": "0.0.10475465",
+      "nftSerial": "24",
+      "mintTxId": "0.0.10470722@1789233046.757212951",
+      "boughtAt": "2026-09-12T17:10:57.626Z"
     }
   },
   "investors": {
@@ -25,6 +186,783 @@
     }
   },
   "activity": [
+    {
+      "at": "2026-09-12T17:40:08.886Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0xc079df067ba3e6c251c46e067f0be70503c8e40c2c6178de1cedaffbfc4b4d4e"
+    },
+    {
+      "at": "2026-09-12T17:39:25.608Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0x1a530ddf67c1b1238d3fb9561f48edbb02678c4fe0e4b00ae5c6907063e94149",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x1a530ddf67c1b1238d3fb9561f48edbb02678c4fe0e4b00ae5c6907063e94149"
+    },
+    {
+      "at": "2026-09-12T17:39:15.921Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:39:12.720Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0x91fb5e7f6259011b59161e3260148c2cdd2f4c861ea9c836ef3905a796746c14",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x91fb5e7f6259011b59161e3260148c2cdd2f4c861ea9c836ef3905a796746c14"
+    },
+    {
+      "at": "2026-09-12T17:39:03.923Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x51866ff74964865053dc891e13930e4c7d1161b452523f8ddae2505791f8a604"
+    },
+    {
+      "at": "2026-09-12T17:38:23.769Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:38:11.802Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x688b095afaf28ef3699ef058ee8fefc46531bea6c0021fe372af1cff4cbd754e"
+    },
+    {
+      "at": "2026-09-12T17:37:28.381Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0xe5406b48623b62d6eb4ec7e8b7c9f1ca2b68404177a7c39261d7ee042b2817b1",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xe5406b48623b62d6eb4ec7e8b7c9f1ca2b68404177a7c39261d7ee042b2817b1"
+    },
+    {
+      "at": "2026-09-12T17:37:18.360Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:37:15.224Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0x36f226c73e929854e974e299c11851c55c49a2306e457570de61b2d1aea6d20a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x36f226c73e929854e974e299c11851c55c49a2306e457570de61b2d1aea6d20a"
+    },
+    {
+      "at": "2026-09-12T17:37:06.575Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x8569cbb7e08f115c047f0d339d035f5885f6ce54ab85de4f8ace7cc98624823a"
+    },
+    {
+      "at": "2026-09-12T17:36:22.160Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:36:10.274Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0xecec5ea43167320d87903156cc9f60b94e6676f3b0b05597377b168f75b980b9"
+    },
+    {
+      "at": "2026-09-12T17:35:27.337Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0x01f06f509d8b04055c2934d2e9549c757d5faa047014fb70a300239a43ac9958",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x01f06f509d8b04055c2934d2e9549c757d5faa047014fb70a300239a43ac9958"
+    },
+    {
+      "at": "2026-09-12T17:35:17.339Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:35:14.129Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0xefc250b9c86219c5812d6c7b46eaf953da93ec7d73cb0dc77db99118c0c4375d",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xefc250b9c86219c5812d6c7b46eaf953da93ec7d73cb0dc77db99118c0c4375d"
+    },
+    {
+      "at": "2026-09-12T17:35:05.480Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x8d4f555b29e5496a1a9c87654e1875b37281789fba12f27c620ed96e2745c5cc"
+    },
+    {
+      "at": "2026-09-12T17:34:20.788Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:33:59.989Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x07b3c1368f3e4b469b804223ee45c06060bb2be0c788eb63b98abc9ec280f82b"
+    },
+    {
+      "at": "2026-09-12T17:33:16.260Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0xc0cf97be205eb9c99368bf97fb05325a6147d50fc1dbe2d768cc8dee72ba5b65",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xc0cf97be205eb9c99368bf97fb05325a6147d50fc1dbe2d768cc8dee72ba5b65"
+    },
+    {
+      "at": "2026-09-12T17:33:11.021Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:33:07.752Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0x0a5c97b0b0d2d367caceed2fb45a7e9526a073e923e9335e9ce78b2cd08e1074",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x0a5c97b0b0d2d367caceed2fb45a7e9526a073e923e9335e9ce78b2cd08e1074"
+    },
+    {
+      "at": "2026-09-12T17:32:58.954Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x11f8d5d443f6906b8f44ed9bf98b555bcc09504ae8aad8df537ac025dcb4aafa"
+    },
+    {
+      "at": "2026-09-12T17:32:18.105Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:31:15.771Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: could not coalesce error"
+    },
+    {
+      "at": "2026-09-12T17:30:42.869Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0x9a96efcdbd2a5f740228f33cd08c3b260952e8719a19760abf1811fac5d3c4a8",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x9a96efcdbd2a5f740228f33cd08c3b260952e8719a19760abf1811fac5d3c4a8"
+    },
+    {
+      "at": "2026-09-12T17:30:37.344Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:30:34.094Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0xcb7b08f838db64d07238e2b8a7fe490442bd4fe665ccdc17f6f86b3b2f6c1e64",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xcb7b08f838db64d07238e2b8a7fe490442bd4fe665ccdc17f6f86b3b2f6c1e64"
+    },
+    {
+      "at": "2026-09-12T17:30:25.449Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0xe1bef1d940b9cb0da1a88d7ae2a6bed84f1b2a1ad5704728e2b504e1b8e105da"
+    },
+    {
+      "at": "2026-09-12T17:29:44.706Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:27:31.888Z",
+      "kind": "claim",
+      "message": "investor1 claimed their payout",
+      "txHash": "0xef52015b510f51f0d41876adcb84499974792c82a6a1505231b9f56a2d658a1b",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xef52015b510f51f0d41876adcb84499974792c82a6a1505231b9f56a2d658a1b"
+    },
+    {
+      "at": "2026-09-12T17:27:23.444Z",
+      "kind": "settle",
+      "message": "Settled via escrow — pool 116 allocated across 2 holders",
+      "txHash": "0x839d14614dc74384288275c4c7ea6c121ce5d9a291c747876643d98151881ab8",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x839d14614dc74384288275c4c7ea6c121ce5d9a291c747876643d98151881ab8"
+    },
+    {
+      "at": "2026-09-12T17:27:05.778Z",
+      "kind": "sales",
+      "message": "Primary sales closed",
+      "txHash": "0xd6b3e192d77df2b2e77da7c8f24e5196fe250b1516e1d7e5b71c1f7ee496fedf",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xd6b3e192d77df2b2e77da7c8f24e5196fe250b1516e1d7e5b71c1f7ee496fedf"
+    },
+    {
+      "at": "2026-09-12T17:26:56.270Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: could not coalesce error"
+    },
+    {
+      "at": "2026-09-12T17:26:26.964Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0xb0fb9d1b6c9583bbc450601b9d9d847d053c83e6d2d96619a740bd61ac7a46b6",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xb0fb9d1b6c9583bbc450601b9d9d847d053c83e6d2d96619a740bd61ac7a46b6"
+    },
+    {
+      "at": "2026-09-12T17:26:18.880Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:26:18.097Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0x12b21bcc0cf0d1c567db7a75c344dc66a2eeb4e6dc64e90b59d9690834ee8136",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x12b21bcc0cf0d1c567db7a75c344dc66a2eeb4e6dc64e90b59d9690834ee8136"
+    },
+    {
+      "at": "2026-09-12T17:26:09.468Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x72f98d5c076d4110fe477b96b75a931a1e86acf0fbcf3afae58e1f52f028b544"
+    },
+    {
+      "at": "2026-09-12T17:25:31.698Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:25:20.820Z",
+      "kind": "sync",
+      "message": "Synced resale royalties — pool now 116",
+      "txHash": "0x3a8d7fcc4372343fb6b736e2259deb468c61a1bcb5ca27f8e858ea091a77156b",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x3a8d7fcc4372343fb6b736e2259deb468c61a1bcb5ca27f8e858ea091a77156b"
+    },
+    {
+      "at": "2026-09-12T17:25:10.916Z",
+      "kind": "resale",
+      "message": "fan resold ticket #12 to investor2 for 80 mUSD — royalty 8 to investor pool",
+      "txId": "0.0.10470722@1789233901.700608105",
+      "hashscan": "https://hashscan.io/testnet/transaction/0.0.10470722@1789233901.700608105"
+    },
+    {
+      "at": "2026-09-12T17:25:05.874Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #12 — 41 to organizer, 9 to pool",
+      "txHash": "0x77d4bdfe17ddb579a0cf916abc22c288cb5a13b7522d04a7e6e9b2687405b23c",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x77d4bdfe17ddb579a0cf916abc22c288cb5a13b7522d04a7e6e9b2687405b23c"
+    },
+    {
+      "at": "2026-09-12T17:24:53.107Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #11 — 41 to organizer, 9 to pool",
+      "txHash": "0x4f7220381f395f87c51297ae5b9de48cf08516c75a003f95193e00acc0b71d68",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x4f7220381f395f87c51297ae5b9de48cf08516c75a003f95193e00acc0b71d68"
+    },
+    {
+      "at": "2026-09-12T17:24:40.084Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #10 — 41 to organizer, 9 to pool",
+      "txHash": "0x7dde6dc8b110ce584475a096b51c9710596e479391763f8b87a8da6c28c8a48c",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x7dde6dc8b110ce584475a096b51c9710596e479391763f8b87a8da6c28c8a48c"
+    },
+    {
+      "at": "2026-09-12T17:24:26.619Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #9 — 41 to organizer, 9 to pool",
+      "txHash": "0x43baad4c462382bae23b23e6ba9c7c3f46d47adfc8ece13f1b20e1b31d5a317d",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x43baad4c462382bae23b23e6ba9c7c3f46d47adfc8ece13f1b20e1b31d5a317d"
+    },
+    {
+      "at": "2026-09-12T17:24:13.469Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #8 — 41 to organizer, 9 to pool",
+      "txHash": "0x84dbd60c74fe52ec54904c9ba67bba46f63afe8c3575972176e6cf897687868a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x84dbd60c74fe52ec54904c9ba67bba46f63afe8c3575972176e6cf897687868a"
+    },
+    {
+      "at": "2026-09-12T17:24:00.887Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #7 — 41 to organizer, 9 to pool",
+      "txHash": "0xa07775936df983bd5b698f2b55364873e67e81188e23606ed3d084df316c3840",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xa07775936df983bd5b698f2b55364873e67e81188e23606ed3d084df316c3840"
+    },
+    {
+      "at": "2026-09-12T17:23:46.913Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #6 — 41 to organizer, 9 to pool",
+      "txHash": "0x7e22ea9c891bfdeabe99d1494b302fae3e5f6a2f7fd1c5ce213c1322f3f21b40",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x7e22ea9c891bfdeabe99d1494b302fae3e5f6a2f7fd1c5ce213c1322f3f21b40"
+    },
+    {
+      "at": "2026-09-12T17:23:34.982Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #5 — 41 to organizer, 9 to pool",
+      "txHash": "0xe865ed3787d46e6bba442d37d4fdcc247dd089a54c672b37f0aa95e8bb93b98f",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xe865ed3787d46e6bba442d37d4fdcc247dd089a54c672b37f0aa95e8bb93b98f"
+    },
+    {
+      "at": "2026-09-12T17:23:22.008Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #4 — 41 to organizer, 9 to pool",
+      "txHash": "0x0ca38302eaf11cd6b2e4e917a350fbd127d65d7515b5c7719658a510e3855ced",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x0ca38302eaf11cd6b2e4e917a350fbd127d65d7515b5c7719658a510e3855ced"
+    },
+    {
+      "at": "2026-09-12T17:23:09.209Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #3 — 41 to organizer, 9 to pool",
+      "txHash": "0xe1a9a1198f3df2b83d091ef6d7aaeffaa5811200eebeaab8b56fcc602340bd5a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xe1a9a1198f3df2b83d091ef6d7aaeffaa5811200eebeaab8b56fcc602340bd5a"
+    },
+    {
+      "at": "2026-09-12T17:22:56.167Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #2 — 41 to organizer, 9 to pool",
+      "txHash": "0x6ebb3497fdd3f910dfe2908a20efeb8040939ce0fc3613aa3d2ef68340fbea32",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x6ebb3497fdd3f910dfe2908a20efeb8040939ce0fc3613aa3d2ef68340fbea32"
+    },
+    {
+      "at": "2026-09-12T17:22:41.907Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #1 — 41 to organizer, 9 to pool",
+      "txHash": "0xbaa1df36a82fab77362e2542404375654787f61bc1868a63b15cb7d80f31aa0e",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xbaa1df36a82fab77362e2542404375654787f61bc1868a63b15cb7d80f31aa0e"
+    },
+    {
+      "at": "2026-09-12T17:22:20.814Z",
+      "kind": "sales",
+      "message": "Primary sales opened",
+      "txHash": "0xd9d5b34fb80ff148f4ea7699c4a04fe5037dee3e7fb934574356096725c5f25e",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xd9d5b34fb80ff148f4ea7699c4a04fe5037dee3e7fb934574356096725c5f25e"
+    },
+    {
+      "at": "2026-09-12T17:22:12.923Z",
+      "kind": "deliver",
+      "message": "Delivered 3000 revenue-right tokens to investor1",
+      "txHash": "0x82a18a6b242b209be4df34e89fe1e036ceb9ad10dfeac29b347d4585a6ebd100",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x82a18a6b242b209be4df34e89fe1e036ceb9ad10dfeac29b347d4585a6ebd100",
+      "ats": {
+        "mode": "mock",
+        "amount": 3000,
+        "txHash": "0x2aafb31e1bd8845409e20554c71b08e348ef89ba483eb5e00336c11a5194bc71",
+        "hashscan": "https://hashscan.io/testnet/transaction/0x2aafb31e1bd8845409e20554c71b08e348ef89ba483eb5e00336c11a5194bc71"
+      }
+    },
+    {
+      "at": "2026-09-12T17:21:56.751Z",
+      "kind": "withdraw",
+      "message": "Organizer withdrew the raise",
+      "txHash": "0xad775cdb1762f7d64b4bd99db18f134ad0a4825153eb9284356af9a9812032fb",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xad775cdb1762f7d64b4bd99db18f134ad0a4825153eb9284356af9a9812032fb"
+    },
+    {
+      "at": "2026-09-12T17:21:45.940Z",
+      "kind": "finalize",
+      "message": "Offering finalized: Funded",
+      "txHash": "0x53f7da6983a4eb9c4acd430cee0011ab4fbc7a9854fffa714f73162a4c30f0de",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x53f7da6983a4eb9c4acd430cee0011ab4fbc7a9854fffa714f73162a4c30f0de"
+    },
+    {
+      "at": "2026-09-12T17:21:36.205Z",
+      "kind": "invest",
+      "message": "investor1 invested 30000 mUSD for 3000 tokens",
+      "txHash": "0x04b1603db03a09797ad297f588cca5e16e943846b40b5013e68123636201c480",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x04b1603db03a09797ad297f588cca5e16e943846b40b5013e68123636201c480"
+    },
+    {
+      "at": "2026-09-12T17:21:17.533Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x1d0b6d8eba5dd877d78d8bee7120fd9adc49cd5e703625fe75264ea5de2eb124",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x1d0b6d8eba5dd877d78d8bee7120fd9adc49cd5e703625fe75264ea5de2eb124"
+    },
+    {
+      "at": "2026-09-12T17:13:23.003Z",
+      "kind": "claim",
+      "message": "investor1 claimed their payout",
+      "txHash": "0x04d2a1f9aed9e156983e305ceb92b7fd3c6585822fb2787949989edc020dd294",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x04d2a1f9aed9e156983e305ceb92b7fd3c6585822fb2787949989edc020dd294"
+    },
+    {
+      "at": "2026-09-12T17:13:14.405Z",
+      "kind": "settle",
+      "message": "Settled via escrow — pool 224 allocated across 2 holders",
+      "txHash": "0x4a2519e7d0f8d109fe7ead2ebf7343653ede60fce71e70f9d9d02cc6ad5869a0",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x4a2519e7d0f8d109fe7ead2ebf7343653ede60fce71e70f9d9d02cc6ad5869a0"
+    },
+    {
+      "at": "2026-09-12T17:12:52.107Z",
+      "kind": "sales",
+      "message": "Primary sales closed",
+      "txHash": "0x76236e5c87d79de54baa5266c9d66d03e3eb8d5d50d0780ba29fd1ac46f06e00",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x76236e5c87d79de54baa5266c9d66d03e3eb8d5d50d0780ba29fd1ac46f06e00"
+    },
+    {
+      "at": "2026-09-12T17:12:45.792Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: could not coalesce error"
+    },
+    {
+      "at": "2026-09-12T17:12:14.695Z",
+      "kind": "compliance",
+      "message": "Unfroze investor1",
+      "mode": "mock",
+      "txHash": "0x66ea4f119685e500e1a52f3c07b45debf99c338491c4033579f6b8c9e84d921f",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x66ea4f119685e500e1a52f3c07b45debf99c338491c4033579f6b8c9e84d921f"
+    },
+    {
+      "at": "2026-09-12T17:12:07.127Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: SenderFrozen(0x07FfCc93B484302a322BF60361906Ce44aE7aa38)"
+    },
+    {
+      "at": "2026-09-12T17:12:06.306Z",
+      "kind": "compliance",
+      "message": "Froze investor1",
+      "mode": "mock",
+      "txHash": "0x2daa69ad090582dce1aa74cd7f90fb395dde18843a054754c5d996c1a1650ded",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x2daa69ad090582dce1aa74cd7f90fb395dde18843a054754c5d996c1a1650ded"
+    },
+    {
+      "at": "2026-09-12T17:11:57.476Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) ALLOWED",
+      "txHash": "0x0afaf31d3b57585e668c3d11e4a00113560702d6ada22eb7dba7ca36b02a1d38"
+    },
+    {
+      "at": "2026-09-12T17:11:19.960Z",
+      "kind": "compliance",
+      "message": "Transfer investor1 → investor2 (1) REJECTED: ReceiverNotKyc(0x6B38dcdeA864e6b55Bce54bFD2C675e4e3773141)"
+    },
+    {
+      "at": "2026-09-12T17:11:01.283Z",
+      "kind": "resale",
+      "message": "fan resold ticket #24 to investor2 for 80 mUSD — royalty 8 to investor pool",
+      "txId": "0.0.10470722@1789233055.831746708",
+      "hashscan": "https://hashscan.io/testnet/transaction/0.0.10470722@1789233055.831746708"
+    },
+    {
+      "at": "2026-09-12T17:10:57.628Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #24 — 41 to organizer, 9 to pool",
+      "txHash": "0xdf1bf517f5a7e2a85464bec1708c701891b514d0d3a62069141ecc3581dd3a5d",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xdf1bf517f5a7e2a85464bec1708c701891b514d0d3a62069141ecc3581dd3a5d"
+    },
+    {
+      "at": "2026-09-12T17:10:44.935Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #23 — 41 to organizer, 9 to pool",
+      "txHash": "0x04a2998ecbe1eeb2f7895446db62d9487883a0515df7d5b61ee8d0d8e45e0828",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x04a2998ecbe1eeb2f7895446db62d9487883a0515df7d5b61ee8d0d8e45e0828"
+    },
+    {
+      "at": "2026-09-12T17:10:32.815Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #22 — 41 to organizer, 9 to pool",
+      "txHash": "0x3ba478d5c448654bb774f15fb13f4ee6f0f0cccfaa77c0ebac89a3c429ddd79f",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x3ba478d5c448654bb774f15fb13f4ee6f0f0cccfaa77c0ebac89a3c429ddd79f"
+    },
+    {
+      "at": "2026-09-12T17:10:19.248Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #21 — 41 to organizer, 9 to pool",
+      "txHash": "0x0d726e7c50b6c1fffeac180ec9cd761502a47af86170d57e88f53a91cd41ab95",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x0d726e7c50b6c1fffeac180ec9cd761502a47af86170d57e88f53a91cd41ab95"
+    },
+    {
+      "at": "2026-09-12T17:10:05.090Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #20 — 41 to organizer, 9 to pool",
+      "txHash": "0x4c0feb5c30705182ab7e437affb9f8a58d85bbf9c83b6c11388ec897106e8e4c",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x4c0feb5c30705182ab7e437affb9f8a58d85bbf9c83b6c11388ec897106e8e4c"
+    },
+    {
+      "at": "2026-09-12T17:09:52.157Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #19 — 41 to organizer, 9 to pool",
+      "txHash": "0xdd02d374e1c77b5c298ca9af2da9bedd46337c50a3323bdf6b50bf51ff96b5c0",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xdd02d374e1c77b5c298ca9af2da9bedd46337c50a3323bdf6b50bf51ff96b5c0"
+    },
+    {
+      "at": "2026-09-12T17:09:37.891Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #18 — 41 to organizer, 9 to pool",
+      "txHash": "0xaf439924d505f932013287bc0ca340e10673e8dbbfde2a941ce8479b625721bb",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xaf439924d505f932013287bc0ca340e10673e8dbbfde2a941ce8479b625721bb"
+    },
+    {
+      "at": "2026-09-12T17:09:25.420Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #17 — 41 to organizer, 9 to pool",
+      "txHash": "0xd4fbd050793002ee49072a78377fc89879cc9b43293766481704d9c97b39ba82",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xd4fbd050793002ee49072a78377fc89879cc9b43293766481704d9c97b39ba82"
+    },
+    {
+      "at": "2026-09-12T17:09:13.320Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #16 — 41 to organizer, 9 to pool",
+      "txHash": "0x771007e4a8c176d452962da7c8c081022d73f9f82e5c786d4f9983fdda0b1c6a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x771007e4a8c176d452962da7c8c081022d73f9f82e5c786d4f9983fdda0b1c6a"
+    },
+    {
+      "at": "2026-09-12T17:09:00.711Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #15 — 41 to organizer, 9 to pool",
+      "txHash": "0x68e224292716655758e2a6d7c601e3d77937afb21b309c54a6920e4163a8df77",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x68e224292716655758e2a6d7c601e3d77937afb21b309c54a6920e4163a8df77"
+    },
+    {
+      "at": "2026-09-12T17:08:47.410Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #14 — 41 to organizer, 9 to pool",
+      "txHash": "0x263457c50f02777d6ef7d0241c8582631daa0e65fe3c3fc39898693f3da0f680",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x263457c50f02777d6ef7d0241c8582631daa0e65fe3c3fc39898693f3da0f680"
+    },
+    {
+      "at": "2026-09-12T17:08:34.327Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #13 — 41 to organizer, 9 to pool",
+      "txHash": "0x3812190c7f09b79449c40698b2ae15bb6743d60d138e259e41013f4189015c86",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x3812190c7f09b79449c40698b2ae15bb6743d60d138e259e41013f4189015c86"
+    },
+    {
+      "at": "2026-09-12T17:08:19.985Z",
+      "kind": "sales",
+      "message": "Primary sales opened",
+      "txHash": "0xc1e3104f876ea36e21bd548985957b8004551c5bd1ff1e5257b56233a58a4e53",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xc1e3104f876ea36e21bd548985957b8004551c5bd1ff1e5257b56233a58a4e53"
+    },
+    {
+      "at": "2026-09-12T17:08:11.972Z",
+      "kind": "deliver",
+      "message": "Delivered 3000 revenue-right tokens to investor1",
+      "txHash": "0x0017606aaf838d3071bf828391b99c862c12780c8e5852f97ab847e826bf084a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x0017606aaf838d3071bf828391b99c862c12780c8e5852f97ab847e826bf084a",
+      "ats": {
+        "mode": "mock",
+        "amount": 3000,
+        "txHash": "0x95c1b3ed55be6936bd4b4b827dc91e31f555b10b7ed98ed6d2cb06b7b05cd0a3",
+        "hashscan": "https://hashscan.io/testnet/transaction/0x95c1b3ed55be6936bd4b4b827dc91e31f555b10b7ed98ed6d2cb06b7b05cd0a3"
+      }
+    },
+    {
+      "at": "2026-09-12T17:07:53.894Z",
+      "kind": "withdraw",
+      "message": "Organizer withdrew the raise",
+      "txHash": "0x42b3a162c3475a85eeb1d8ec237206853eb9c81586c64316e6edd2633c7b7166",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x42b3a162c3475a85eeb1d8ec237206853eb9c81586c64316e6edd2633c7b7166"
+    },
+    {
+      "at": "2026-09-12T17:07:44.573Z",
+      "kind": "finalize",
+      "message": "Offering finalized: Funded",
+      "txHash": "0xffd2ce950440c56e147cf0d3dbd9b9f1d9836cc6ed03e9b25aeaa2303eda7604",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xffd2ce950440c56e147cf0d3dbd9b9f1d9836cc6ed03e9b25aeaa2303eda7604"
+    },
+    {
+      "at": "2026-09-12T17:07:35.369Z",
+      "kind": "invest",
+      "message": "investor1 invested 30000 mUSD for 3000 tokens",
+      "txHash": "0xf86424c51f605528a0a71631a9618f48ed219f161c3871dc36ea5bfb5601c6e7",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xf86424c51f605528a0a71631a9618f48ed219f161c3871dc36ea5bfb5601c6e7"
+    },
+    {
+      "at": "2026-09-12T17:07:17.730Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x7faf9485669dfd25da28f5656523dcdf78f798e9aba8248a2b2140c9df5e9269",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x7faf9485669dfd25da28f5656523dcdf78f798e9aba8248a2b2140c9df5e9269"
+    },
+    {
+      "at": "2026-09-12T17:00:28.830Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #12 — 41 to organizer, 9 to pool",
+      "txHash": "0xee585b89fe84a548c658e96f0377eb0db8accb3784279577fb910a44abe610c1",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xee585b89fe84a548c658e96f0377eb0db8accb3784279577fb910a44abe610c1"
+    },
+    {
+      "at": "2026-09-12T17:00:14.938Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #11 — 41 to organizer, 9 to pool",
+      "txHash": "0x66c1dfdc444c79f58a12eabb25920e824aebb15107d6239dd56514697472c283",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x66c1dfdc444c79f58a12eabb25920e824aebb15107d6239dd56514697472c283"
+    },
+    {
+      "at": "2026-09-12T17:00:01.603Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #10 — 41 to organizer, 9 to pool",
+      "txHash": "0x0460be14c1f42df249b559237911de945b86df40aabe7fdfda7f629998937c89",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x0460be14c1f42df249b559237911de945b86df40aabe7fdfda7f629998937c89"
+    },
+    {
+      "at": "2026-09-12T16:59:47.063Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #9 — 41 to organizer, 9 to pool",
+      "txHash": "0x0bb471f0196481a5628d6eb1d7f0d90144a84c4089aa5eec6f7629804fb6de85",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x0bb471f0196481a5628d6eb1d7f0d90144a84c4089aa5eec6f7629804fb6de85"
+    },
+    {
+      "at": "2026-09-12T16:59:34.226Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #8 — 41 to organizer, 9 to pool",
+      "txHash": "0xd119ea8f5eac70978e846666fdb6b7837a84149bd33ca769b483b7035681bb5a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xd119ea8f5eac70978e846666fdb6b7837a84149bd33ca769b483b7035681bb5a"
+    },
+    {
+      "at": "2026-09-12T16:59:21.442Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #7 — 41 to organizer, 9 to pool",
+      "txHash": "0xdfe4b585168cb7df5ba819025fa3e874e2268cf72263ea2a9b91d8667b1a96b0",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xdfe4b585168cb7df5ba819025fa3e874e2268cf72263ea2a9b91d8667b1a96b0"
+    },
+    {
+      "at": "2026-09-12T16:59:07.601Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #6 — 41 to organizer, 9 to pool",
+      "txHash": "0x5264a04aeead33587edeb762483f82e176c9cf27bed9bf3e75bace18424aa10d",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x5264a04aeead33587edeb762483f82e176c9cf27bed9bf3e75bace18424aa10d"
+    },
+    {
+      "at": "2026-09-12T16:58:54.340Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #5 — 41 to organizer, 9 to pool",
+      "txHash": "0x5c72ab162222cb9f71cb0d3fc62574eae279cf78cd2b490653ceb64d769bc659",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x5c72ab162222cb9f71cb0d3fc62574eae279cf78cd2b490653ceb64d769bc659"
+    },
+    {
+      "at": "2026-09-12T16:58:41.322Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #4 — 41 to organizer, 9 to pool",
+      "txHash": "0xb902a7e7b7c31d5135da762b975287f72c90e055f3fd1ef279733c9df5f0191d",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xb902a7e7b7c31d5135da762b975287f72c90e055f3fd1ef279733c9df5f0191d"
+    },
+    {
+      "at": "2026-09-12T16:58:27.982Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #3 — 41 to organizer, 9 to pool",
+      "txHash": "0x242853c03498ad6f1105839c0ffc88f1e35f4ee85c2839ed07e7e49674c3bf4a",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x242853c03498ad6f1105839c0ffc88f1e35f4ee85c2839ed07e7e49674c3bf4a"
+    },
+    {
+      "at": "2026-09-12T16:58:13.658Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #2 — 41 to organizer, 9 to pool",
+      "txHash": "0xcec8aaa85f0e820388af30ec7109bbde147a3ae22916401724bbe3ad73114f5b",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xcec8aaa85f0e820388af30ec7109bbde147a3ae22916401724bbe3ad73114f5b"
+    },
+    {
+      "at": "2026-09-12T16:58:00.778Z",
+      "kind": "ticket",
+      "message": "fan bought ticket #1 — 41 to organizer, 9 to pool",
+      "txHash": "0x58fd0e9c7b12084b9449aa7051f74f2f4b7d22e6f0e64f4541dc0fbab7de8135",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x58fd0e9c7b12084b9449aa7051f74f2f4b7d22e6f0e64f4541dc0fbab7de8135"
+    },
+    {
+      "at": "2026-09-12T16:57:37.940Z",
+      "kind": "sales",
+      "message": "Primary sales opened",
+      "txHash": "0xfac0c0b64d8ac2644dc969542ad4d2ce123d499d1e0e954a6686102cb17fe547",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xfac0c0b64d8ac2644dc969542ad4d2ce123d499d1e0e954a6686102cb17fe547"
+    },
+    {
+      "at": "2026-09-12T16:57:29.640Z",
+      "kind": "deliver",
+      "message": "Delivered 3000 revenue-right tokens to investor1",
+      "txHash": "0x5e0ac71f0ad2a4fcfa18a51a1cef88d8e273d91b55ca14ab16ad552c1785b8ae",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x5e0ac71f0ad2a4fcfa18a51a1cef88d8e273d91b55ca14ab16ad552c1785b8ae",
+      "ats": {
+        "mode": "mock",
+        "amount": 3000,
+        "txHash": "0xda7eca4765a9bc8152a002e71e514796d828f41397bebd262de8432eedf8faa2",
+        "hashscan": "https://hashscan.io/testnet/transaction/0xda7eca4765a9bc8152a002e71e514796d828f41397bebd262de8432eedf8faa2"
+      }
+    },
+    {
+      "at": "2026-09-12T16:57:13.271Z",
+      "kind": "withdraw",
+      "message": "Organizer withdrew the raise",
+      "txHash": "0xf475032dee556265a1c1b033489f3dfcd25454856d5836e7dffa78f1d573e2f1",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xf475032dee556265a1c1b033489f3dfcd25454856d5836e7dffa78f1d573e2f1"
+    },
+    {
+      "at": "2026-09-12T16:57:02.742Z",
+      "kind": "finalize",
+      "message": "Offering finalized: Funded",
+      "txHash": "0x3d6625f987bc6d9a599ad4a8f9736bcb127237b24095ac7b59fed8c473c69edf",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x3d6625f987bc6d9a599ad4a8f9736bcb127237b24095ac7b59fed8c473c69edf"
+    },
+    {
+      "at": "2026-09-12T16:56:52.912Z",
+      "kind": "invest",
+      "message": "investor1 invested 30000 mUSD for 3000 tokens",
+      "txHash": "0xe73de8c95085dcb6e66cb2952f93fff347fab9f6a6ae4e04a5c731e2fd766de4",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xe73de8c95085dcb6e66cb2952f93fff347fab9f6a6ae4e04a5c731e2fd766de4"
+    },
+    {
+      "at": "2026-09-12T16:56:35.768Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0xb1235151b7412ea21e5c5f75de340120de7a0fd883baeb1a462fe42b11a13ee1",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xb1235151b7412ea21e5c5f75de340120de7a0fd883baeb1a462fe42b11a13ee1"
+    },
+    {
+      "at": "2026-09-12T16:50:44.894Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x583faac749f4ba4b7d29db25497fb0ab2d980b29161a5dcd06c201d16413c058",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x583faac749f4ba4b7d29db25497fb0ab2d980b29161a5dcd06c201d16413c058"
+    },
+    {
+      "at": "2026-09-12T16:46:55.024Z",
+      "kind": "deliver",
+      "message": "Delivered 3000 revenue-right tokens to investor1",
+      "txHash": "0xf841fe8038bb21905e77ee4cb61e1469f57ae7a0e6c7083cf93675dd3401ec6f",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xf841fe8038bb21905e77ee4cb61e1469f57ae7a0e6c7083cf93675dd3401ec6f",
+      "ats": {
+        "mode": "mock",
+        "amount": 3000,
+        "txHash": "0xd02b8072200d18a6676fa0abd6e180778daac6ef17bb289a8e7d8e5adfc765ba",
+        "hashscan": "https://hashscan.io/testnet/transaction/0xd02b8072200d18a6676fa0abd6e180778daac6ef17bb289a8e7d8e5adfc765ba"
+      }
+    },
+    {
+      "at": "2026-09-12T16:46:37.790Z",
+      "kind": "withdraw",
+      "message": "Organizer withdrew the raise",
+      "txHash": "0xb6495a4920d17e8c8a7cac402804a88ca5bc6cb43859eaa578280da0a98bf8ac",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xb6495a4920d17e8c8a7cac402804a88ca5bc6cb43859eaa578280da0a98bf8ac"
+    },
+    {
+      "at": "2026-09-12T16:46:28.394Z",
+      "kind": "finalize",
+      "message": "Offering finalized: Funded",
+      "txHash": "0x8c54a33c3c61f37c2cc6d57f6faf4854d04aa00d9b8e107b43f242121ae480ff",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x8c54a33c3c61f37c2cc6d57f6faf4854d04aa00d9b8e107b43f242121ae480ff"
+    },
+    {
+      "at": "2026-09-12T16:46:17.824Z",
+      "kind": "invest",
+      "message": "investor1 invested 30000 mUSD for 3000 tokens",
+      "txHash": "0x939d9085a9d8424fde68277d902ec361b4c148a7b0b53077e6642a8887dc9bf2",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x939d9085a9d8424fde68277d902ec361b4c148a7b0b53077e6642a8887dc9bf2"
+    },
+    {
+      "at": "2026-09-12T16:46:00.102Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0xe57526e2790a74ae61c2b60756531dfabf3b70a6a31f7a5bc944db86520a1b1d",
+      "hashscan": "https://hashscan.io/testnet/transaction/0xe57526e2790a74ae61c2b60756531dfabf3b70a6a31f7a5bc944db86520a1b1d"
+    },
+    {
+      "at": "2026-09-12T16:40:48.499Z",
+      "kind": "kyc",
+      "message": "Approved KYC for investor1",
+      "txHash": "0x7c469734a7305182f80aabadfa72877de2544f0d20fd038730784771a3df3bff",
+      "hashscan": "https://hashscan.io/testnet/transaction/0x7c469734a7305182f80aabadfa72877de2544f0d20fd038730784771a3df3bff"
+    },
     {
       "at": "2026-09-12T10:06:29.811Z",
       "kind": "compliance",
@@ -633,58 +1571,23 @@
       "message": "Approved KYC for investor1",
       "txHash": "0xc9e1f9b136c82b2d78b04314ecfac445aa713fbd49d7a14b66c7940f6268eae5",
       "hashscan": "https://hashscan.io/testnet/transaction/0xc9e1f9b136c82b2d78b04314ecfac445aa713fbd49d7a14b66c7940f6268eae5"
-    },
-    {
-      "at": "2026-09-11T07:44:29.211Z",
-      "kind": "kyc",
-      "message": "Approved KYC for investor1",
-      "txHash": "0xce286f58d6357b50dc978602428905b7ffebb68da994d37fe1ad16719c63bee0",
-      "hashscan": "https://hashscan.io/testnet/transaction/0xce286f58d6357b50dc978602428905b7ffebb68da994d37fe1ad16719c63bee0"
-    },
-    {
-      "at": "2026-09-11T07:44:29.210Z",
-      "kind": "kyc",
-      "message": "Approved KYC for investor1",
-      "txHash": "0x2adf80970bd6b3f315d8cef8036af00d2804b1bc7a061e48ba68b2e64df2138a",
-      "hashscan": "https://hashscan.io/testnet/transaction/0x2adf80970bd6b3f315d8cef8036af00d2804b1bc7a061e48ba68b2e64df2138a"
-    },
-    {
-      "at": "2026-09-11T07:35:16.388Z",
-      "kind": "sales",
-      "message": "Primary sales opened",
-      "txHash": "0x17b3c03b9656029e87a2eead81187086a4245b7173d486cefa5d012d30d20630",
-      "hashscan": "https://hashscan.io/testnet/transaction/0x17b3c03b9656029e87a2eead81187086a4245b7173d486cefa5d012d30d20630"
-    },
-    {
-      "at": "2026-09-11T07:35:09.597Z",
-      "kind": "sales",
-      "message": "Primary sales opened",
-      "txHash": "0x89e3ee30084387cf75781b8cfdff9feba2b14d07d15988dcc9c43e0775cf599f",
-      "hashscan": "https://hashscan.io/testnet/transaction/0x89e3ee30084387cf75781b8cfdff9feba2b14d07d15988dcc9c43e0775cf599f"
-    },
-    {
-      "at": "2026-09-11T07:35:05.296Z",
-      "kind": "sales",
-      "message": "Primary sales closed",
-      "txHash": "0xab252891becf005b307178954538f6efa896e6547c8164c29016fbbf1c689683",
-      "hashscan": "https://hashscan.io/testnet/transaction/0xab252891becf005b307178954538f6efa896e6547c8164c29016fbbf1c689683"
     }
   ],
   "settlement": {
-    "at": "2026-09-12T09:06:58.980Z",
+    "at": "2026-09-12T17:27:23.442Z",
     "path": "escrow",
-    "poolAtSettlement": 125,
-    "supplySnapshot": 3000,
+    "poolAtSettlement": 116,
+    "supplySnapshot": 15000,
     "allocations": [
       {
         "holder": "0x07ffcc93b484302a322bf60361906ce44ae7aa38",
-        "balance": 2993,
-        "claimable": 124.70833333333333
+        "balance": 14983,
+        "claimable": 115.86853333333333
       },
       {
         "holder": "0x6b38dcdea864e6b55bce54bfd2c675e4e3773141",
-        "balance": 7,
-        "claimable": 0.2916666666666667
+        "balance": 17,
+        "claimable": 0.13146666666666668
       }
     ]
   }

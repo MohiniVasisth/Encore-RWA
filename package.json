@@ -16,9 +16,11 @@
     "deploy:escrow": "hardhat run scripts/deploy/deployTicketEscrow.js --network hederaTestnet",
     "deploy:mock-rr": "hardhat run scripts/deploy/deployMockRevenueRight.js --network hederaTestnet",
     "wireup": "hardhat run scripts/deploy/wireUp.js --network hederaTestnet",
+    "hedera:associate-nft": "node scripts/hedera/associateTicketNft.js",
     "ats:check": "hardhat run scripts/ats/checkAts.js --network hederaTestnet",
     "ats:grant-roles": "hardhat run scripts/ats/grantRoles.js --network hederaTestnet",
     "demo": "node scripts/demo/endToEnd.js",
+    "demo:reset": "npm run deploy:vault && npm run deploy:escrow && npm run wireup && npm run hedera:ticket-nft && npm run hedera:associate-nft",
     "backend": "node backend/server.js",
     "dev": "node --watch backend/server.js"
   },

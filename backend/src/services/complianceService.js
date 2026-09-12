@@ -18,6 +18,15 @@ const atsService = require("./atsService");
 const { sendTx } = require("../hedera/client");
 const store = require("../state/store");
 
+// The Hashio JSON-RPC relay confirms a state-changing tx (setKyc/setFrozen)
+// quickly via its receipt, but the very next eth_estimateGas call is served
+// from the relay's mirror-node-backed view, which can lag a couple seconds
+// behind consensus. Without this pause, a transfer attempted right after an
+// unfreeze/KYC-approve can still see the old (frozen/unapproved) state and
+// get rejected even though the change already landed on-chain.
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const RELAY_SETTLE_MS = 2500;
+
 async function status(roleName) {
   const addr = config.roles[roleName].evmAddress;
   const s = await atsService.holderStatus(addr);
@@ -33,32 +42,59 @@ async function setFrozen(roleName, frozen) {
 /**
  * Attempt a revenue-right transfer `fromRole` → `toRole` of `amount` whole
  * tokens and report whether ATS allowed it.
+ *
+ * Retries a few times when the failure does NOT decode to one of the
+ * contract's own compliance errors (ReceiverNotKyc / SenderFrozen /
+ * ReceiverFrozen) — that shape means the relay never actually got a real
+ * answer back from the chain (a stale mirror-node read, a dropped request,
+ * "could not coalesce error", etc.), not a genuine on-chain rejection. A
+ * decoded compliance error, by contrast, is real and reported immediately.
  */
-async function attemptTransfer(fromRole, toRole, amount) {
+async function attemptTransfer(fromRole, toRole, amount, attempts = 3) {
   const to = config.roles[toRole].evmAddress;
   const contract = atsService.tokenContract(fromRole);
-  try {
-    let value = BigInt(amount);
-    if (!atsService.isMock()) {
-      const decimals = Number(await contract.decimals());
-      value = BigInt(amount) * 10n ** BigInt(decimals);
-    }
-    const r = await sendTx(() => contract.transfer(to, value), contract.runner);
-    store.recordActivity(
-      "compliance",
-      `Transfer ${fromRole} → ${toRole} (${amount}) ALLOWED`,
-      { txHash: r.hash }
-    );
-    return { allowed: true, txHash: r.hash };
-  } catch (err) {
-    const reason = decodeReason(err, contract.interface);
-    store.recordActivity(
-      "compliance",
-      `Transfer ${fromRole} → ${toRole} (${amount}) REJECTED: ${reason}`,
-      {}
-    );
-    return { allowed: false, reason };
+  let value = BigInt(amount);
+  if (!atsService.isMock()) {
+    const decimals = Number(await contract.decimals());
+    value = BigInt(amount) * 10n ** BigInt(decimals);
   }
+
+  let lastReason;
+  for (let i = 0; i < attempts; i++) {
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      const r = await sendTx(() => contract.transfer(to, value), contract.runner);
+      store.recordActivity(
+        "compliance",
+        `Transfer ${fromRole} → ${toRole} (${amount}) ALLOWED`,
+        { txHash: r.hash }
+      );
+      return { allowed: true, txHash: r.hash };
+    } catch (err) {
+      const decoded = decodeCustomError(err, contract.interface);
+      if (decoded) {
+        store.recordActivity(
+          "compliance",
+          `Transfer ${fromRole} → ${toRole} (${amount}) REJECTED: ${decoded}`,
+          {}
+        );
+        return { allowed: false, reason: decoded };
+      }
+      // Undecoded failure — likely relay lag/flakiness, not a real revert.
+      lastReason = decodeReason(err, contract.interface);
+      if (i < attempts - 1) {
+        // eslint-disable-next-line no-await-in-loop
+        await sleep(RELAY_SETTLE_MS);
+      }
+    }
+  }
+
+  store.recordActivity(
+    "compliance",
+    `Transfer ${fromRole} → ${toRole} (${amount}) REJECTED: ${lastReason} (after ${attempts} attempts)`,
+    {}
+  );
+  return { allowed: false, reason: lastReason };
 }
 
 /**
@@ -69,6 +105,18 @@ async function attemptTransfer(fromRole, toRole, amount) {
  * `interface` so a frozen/non-KYC revert reads as `SenderFrozen(0x07ff...)`
  * instead of ethers' generic "unknown custom error".
  */
+/** Returns "Name(args)" only when the revert data decodes to a real custom
+ *  error this ABI knows — i.e. a genuine on-chain rejection — else null. */
+function decodeCustomError(err, iface) {
+  if (!iface || typeof err.data !== "string") return null;
+  try {
+    const parsed = iface.parseError(err.data);
+    return parsed ? `${parsed.name}(${parsed.args.map(String).join(", ")})` : null;
+  } catch (_) {
+    return null;
+  }
+}
+
 function decodeReason(err, iface) {
   if (iface && typeof err.data === "string") {
     try {
@@ -95,6 +143,7 @@ async function runScenario() {
 
   // Case 2: unverified receiver is rejected.
   await atsService.setKyc(i2, false);
+  await sleep(RELAY_SETTLE_MS);
   report.push({
     case: "Unverified account tries to receive tokens",
     ...(await attemptTransfer("investor1", "investor2", 1)),
@@ -103,6 +152,7 @@ async function runScenario() {
 
   // Case 1: KYC the receiver, transfer succeeds.
   await atsService.setKyc(i2, true);
+  await sleep(RELAY_SETTLE_MS);
   report.push({
     case: "KYC-approved investor receives tokens",
     ...(await attemptTransfer("investor1", "investor2", 1)),
@@ -111,6 +161,7 @@ async function runScenario() {
 
   // Case 3: freeze investor1, their transfer is rejected.
   await setFrozen("investor1", true);
+  await sleep(RELAY_SETTLE_MS);
   report.push({
     case: "Frozen investor tries to transfer",
     ...(await attemptTransfer("investor1", "investor2", 1)),
@@ -119,6 +170,7 @@ async function runScenario() {
 
   // Case 4: unfreeze, transfer succeeds again.
   await setFrozen("investor1", false);
+  await sleep(RELAY_SETTLE_MS);
   report.push({
     case: "Unfrozen investor transfers again",
     ...(await attemptTransfer("investor1", "investor2", 1)),
